@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="moreDirectivesApp">
+    <head>
+        <title>More Directives App</title>
+        <script src="angular.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <h1>More Directives</h1>
+        <div ng-controller="mdController as c1">
+            <h3>Example 1</h3>
+            <input type="checkbox" ng-model="c1.checked" />
+            <p ng-if="c1.checked">Some Content</p>
+
+            <h3>Example 2</h3>
+            <p ng-repeat="i in c1.myList">use of ng-repeat</p>
+
+            <h3>Example 3</h3>
+            <div ng-repeat="i in c1.myList2" >
+                <p>{{i}}</p>
+            </div>
+
+            <h3>Example 4</h3>
+            <div ng-repeat="obj in c1.myList3">
+                <p>{{$index+1}} {{obj.name}} {{obj.age}}</p><hr/>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html ng-app="nestedControllers">
+    <head>
+        <title>Nested Controllers Examples</title>
+        <script src="angular.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <h1>ngModel Examples App</h1>
+
+<!--    ng-controller way
+        <div ng-controller="Ctrl1">
+            <p>{{testProp}}</p>
+            <div ng-controller="Ctrl2">
+                <p>{{testProp}}</p>
+            </div> 
+        </div>  
+-->             
+        <!--controller as syntax way-->
+        <div ng-controller="Ctrl1 as c1">
+            <p>{{c1.testProp}}</p>
+            <div ng-controller="Ctrl2 as c2">
+                <p>{{c2.testProp}}</p>
+            </div> 
+        </div>
+
+    </body>
+</html>
